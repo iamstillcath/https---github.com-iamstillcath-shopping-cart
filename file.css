@@ -1,0 +1,66 @@
+*{
+    background-color: white;
+    margin-left: 30px;
+    overflow-wrap: normal;
+}
+
+#that{
+    margin-top: 120px;
+    font-size: 20px;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+select{
+    width: 14%;
+    padding: 3px;
+    border: 2.5px solid black;
+    margin-left: 5%;
+ 
+}
+
+input{
+    border: 2.5px solid black;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: -8px;
+    
+}
+
+#text2{
+    margin-top: -26px;
+}
+    input {
+        display: inline-block;
+        float: right;
+        margin-right: 77%;
+    }
+
+button{
+    width: 21%;
+    background-color: lightgray;
+}
+
+
+#display{
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: auto;
+    border: 2px solid black;
+    font-size: 16px;
+   
+}
+
+table , tr,th{
+    border: 1px solid black;
+    padding: 4px;
+    text-align: center;
+    background-color: lightgray;
+
+}
+
+td {
+    margin: 15px;
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}

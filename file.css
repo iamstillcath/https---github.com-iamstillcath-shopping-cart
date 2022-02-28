@@ -40,15 +40,16 @@ button{
     background-color: lightgray;
 }
 
-
 #display{
     margin-top: 30px;
     border-collapse: collapse;
+    visibility: hidden;
     width: auto;
     border: 2px solid black;
     font-size: 16px;
    
 }
+
 
 table , tr,th{
     border: 1px solid black;

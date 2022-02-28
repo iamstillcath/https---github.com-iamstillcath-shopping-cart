@@ -18,16 +18,16 @@
             <option>Songs</option>
         </select><br><br>
         Description: <input required id="text2" type="text"><br><br><br>
-        Price:<input required id="prices" type="number" step="1"><br><br>
-        Discount: <input id="disc" required type="number"><br><br>
+        Price:<input required id="prices" type="number" min="0" step="1"><br><br>
+        Discount: <input id="disc" required min="0" type="number" ><br><br>
     
         <button type="submit">Add Item</button>
 
-        <div id="result"></div>
+        <!-- <div id="result"></div> -->
     </form>
 
 
-    <td>
+    
         <table id="display">
             <thead>
                 <tr>
@@ -45,7 +45,7 @@
 
             </tbody>
         </table>
-    </td>
+
     </div>
    
     <script src="file.js"></script>

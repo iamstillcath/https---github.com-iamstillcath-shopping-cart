@@ -1,11 +1,11 @@
 *{
     background-color: white;
-    margin-left: 30px;
+    margin-left: 40px;
     overflow-wrap: normal;
 }
 
 #that{
-    max-width: 100%;
+    max-width: 200%;
     width: 100%;
     margin: 0 auto;
     margin-top: 120px;
@@ -31,12 +31,12 @@ input{
 }
 
 #text2{
-    margin-top: -6px;
+    margin-top: -20px;
 }
     input {
-        display: inline-block;
         float: right;
         margin-right: 77%;
+        flex-direction: column;
     }
 
 button{

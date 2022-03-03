@@ -86,8 +86,9 @@ output.addEventListener('submit', function (e) {
 
         let totalDiscount = totalRow.insertCell(6);
         result1 = +price - +output;
-        totalDiscount.innerHTML = result1.toFixed(1);
-
+            console.log("this isresult===>", result1)
+        totalDiscount.innerHTML = +result1.toFixed(1);
+       console.log("thi is discount total",totalDiscount)
         let del = totalRow.insertCell(7);
         del.innerHTML = "";
 
@@ -102,13 +103,10 @@ output.addEventListener('submit', function (e) {
 
     } else {
         let childRow = document.querySelector("#row").children;
-        // console.log("this is childrow===>", childRow)
-
         childRow[1].innerText = parseInt(childRow[1].innerText) + 1;
         childRow[4].innerText = parseInt(childRow[4].innerText) + parseInt(price);
-        const result = price - output;
-        // console.log("tis is result1", result.toFixed(1), "this is childrow2==>", parseInt(childRow[6].innerText))
-        const result2 = +childRow[6].innerText + +result
+        const result = +price - +output;
+        const result2 = +childRow[6].innerText + +result.toFixed(1)
         childRow[6].innerText = result2.toFixed(1);
 
 
@@ -151,8 +149,8 @@ output.addEventListener('submit', function (e) {
             const childRow = document.querySelector("#row").children;
             childRow[1].innerText = parseInt(childRow[1].innerText) - 1;
             childRow[4].innerText = parseInt(childRow[4].innerText) - parseInt(price);
-            const result2 = +childRow[6].innerText - +result;
-            childRow[6].innerText = result2.toFixed(2);
+            const result2 = +childRow[6].innerText - +result.toFixed(1);
+            childRow[6].innerText = result2.toFixed(1);
         }
     })
 

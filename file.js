@@ -18,6 +18,7 @@ output.addEventListener('submit', function (e) {
     let table = document.getElementById("display").getElementsByTagName("tbody")[0];
 
     if (table.rows.length === 0) {
+       console.log("this is rowsa===>",table.rows.length)
         rowIndex = 0
     } else {
         rowIndex = rowIndex + 1
@@ -48,7 +49,7 @@ output.addEventListener('submit', function (e) {
     let output = (discount * price) / 100;
     let result = price - output
     pwd.innerText = result.toFixed(1);
-    console.log("this is resultup===>", result.toFixed(1))
+    // console.log("this is resultup===>", result.toFixed(1))
 
     let action = newRow.insertCell(7);
     let trashbtn = document.createElement('i');
@@ -84,7 +85,7 @@ output.addEventListener('submit', function (e) {
         pri.innerHTML = "";
 
         let totalDiscount = totalRow.insertCell(6);
-        result1 = price - output;
+        result1 = +price - +output;
         totalDiscount.innerHTML = result1.toFixed(1);
 
         let del = totalRow.insertCell(7);
@@ -101,13 +102,13 @@ output.addEventListener('submit', function (e) {
 
     } else {
         let childRow = document.querySelector("#row").children;
-        console.log("this is childrow===>", childRow)
+        // console.log("this is childrow===>", childRow)
 
         childRow[1].innerText = parseInt(childRow[1].innerText) + 1;
         childRow[4].innerText = parseInt(childRow[4].innerText) + parseInt(price);
         const result = price - output;
-        console.log("tis is result1", result.toFixed(1), "this is childrow2==>", parseInt(childRow[6].innerText))
-        const result2 = parseFloat(childRow[6].innerText) + parseFloat(result)
+        // console.log("tis is result1", result.toFixed(1), "this is childrow2==>", parseInt(childRow[6].innerText))
+        const result2 = +childRow[6].innerText + +result
         childRow[6].innerText = result2.toFixed(1);
 
 
@@ -123,6 +124,7 @@ output.addEventListener('submit', function (e) {
         e.preventDefault();
 
         rowIndex = rowIndex - 1;
+        console.log("rowindex===>",rowIndex)
 
         const rowText = e.target.parentElement.parentElement.children[0].innerText;
 
@@ -149,8 +151,8 @@ output.addEventListener('submit', function (e) {
             const childRow = document.querySelector("#row").children;
             childRow[1].innerText = parseInt(childRow[1].innerText) - 1;
             childRow[4].innerText = parseInt(childRow[4].innerText) - parseInt(price);
-            const result2 = parseFloat(childRow[6].innerText) - parseFloat(result);
-            childRow[6].innerText = result2.toFixed(1);
+            const result2 = +childRow[6].innerText - +result;
+            childRow[6].innerText = result2.toFixed(2);
         }
     })
 

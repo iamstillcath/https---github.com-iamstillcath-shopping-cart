@@ -1,46 +1,39 @@
-*{
-    background-color: white;
-    margin-left: 40px;
-    overflow-wrap: normal;
-}
-
-#that{
-    max-width: 200%;
-    width: 100%;
+.page-wrapper{
+    max-width: 1000px;
+    width: 94%;
     margin: 0 auto;
     margin-top: 120px;
     font-size: 20px;
     font-family: Helvetica,Arial,sans-serif;
 }
 
-select{
-    width: 13.5%;
-    padding: 3px;
+input, select{
+    max-width: 230px;
+    width: 100%;
     border: 2.5px solid black;
-    margin-left: 88px;
-    margin-bottom: 20px;
- 
+    height: 30px;
+}
+
+#forms > div{
+    display: flex;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+label{
+    max-width: 110px;
+    width: 100%;
+    margin-right: 30px;
 }
 
 input{
-    border: 2.5px solid black;
     font-size: 18px;
     display: inline-block;
-    margin-top: -8px;
-    
 }
-
-#text2{
-    margin-top: -20px;
-}
-    input {
-        float: right;
-        margin-right: 77%;
-        flex-direction: column;
-    }
 
 button{
-    width: 21%;
+    max-width: 230px;
+    width: 100%;
     background-color: lightgray;
 }
 
@@ -68,7 +61,4 @@ td {
     border: 1px solid black;
     padding: 12px;
     text-align: center;
-}
-#prices{
-    margin-top: -10px;
 }

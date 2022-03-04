@@ -9,25 +9,37 @@
 </head>
 
 <body>
-    <div id="that">
+    <div class="page-wrapper">
         <form id="forms">
-            Name: <input required id="name" type="text" value=""><br><br>
-            Type: <select required id="select">
-                <option></option>
-                <option>Books</option>
-                <option>e-Books</option>
-                <option>Movies</option>
-                <option>Songs</option>
-            </select><br><br>
-            Description: <input required id="text2" type="text"><br><br><br>
-            Price:<input required id="prices" type="number" min="0" step="1"><br><br>
-            Discount: <input id="disc" required min="0" type="number"><br><br>
-
+            <div>
+                <label>Name:</label>
+                <input required id="name" type="text" value="">
+            </div>
+            <div>
+                <label>Type:</label>
+                <select required id="select">
+                    <option></option>
+                    <option>Books</option>
+                    <option>e-Books</option>
+                    <option>Movies</option>
+                    <option>Songs</option>
+                </select>
+            </div>
+            <div>
+                <label>Description:</label>
+                <input required id="text2" type="text">
+            </div>
+            <div>
+                <label>Price:</label>
+                <input required id="prices" type="number" min="0" step="1">
+            </div>
+            <div>
+                <label>Discount:</label>
+                <input id="disc" required min="0" type="number">
+            </div>
             <button type="submit">Add Item</button>
 
         </form>
-
-
 
         <table id="display">
             <thead>
